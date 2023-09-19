@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use \Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -44,7 +45,7 @@ class User extends Authenticatable
     ];
 
     function adminlte_image(){
-        return 'https://picsum.photos/120/120';
+        return 'assets/imgs/' . Auth::user()->image_url;
     }
 
     public function adminlte_profile_url()
