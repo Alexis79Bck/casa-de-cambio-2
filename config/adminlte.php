@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<small>Casa de Cambio</small>', //'<b>Admin</b>3',
+    'logo' => '<small>Casa de Cambio</small>', //'<b>Admin</b>3', 
     'logo_img' => 'assets/imgs/' . env('APP_LOGO'), //'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-rounded bg-white elevation-3',
     'logo_img_xl' => null,
@@ -326,7 +326,26 @@ return [
             'text'        => 'Usuarios',
             'url'         => '/users',
             'icon'        => 'fas fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Registrar Usuario',
+                    'icon' => 'fas fa-user-plus',
+                    'url'  => '/new-user',
+                ],
+                [
+                    'text' => 'Listado de Usuarios',
+                    'icon' => 'fas fa-bars',
+                    'url'  => '/users',
+                ],
+                [
+                    'text' => 'Reportes',
+                    'icon' => 'far fa-file-alt',
+                    'url'  => '#',
+
+                ],
+            ],
         ],
+
         ['header' => 'Sucursales'],
         [
             'text'        => 'Inicio de Caja',
