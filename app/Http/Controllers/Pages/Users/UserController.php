@@ -20,12 +20,6 @@ class UserController extends Controller
         $btnEdit = ['class'=>'btn btn-sm btn-warning', 'title'=>'Edit', 'icon' => 'fas fa-edit'];
         $btnDelete = ['class'=>'btn btn-sm btn-danger', 'title'=>'Delete','icon' => 'fas fa-trash'];
         $btnShow = ['class'=>'btn btn-sm btn-info', 'title'=>'Show','icon' => 'fas fa-eye'];
-        // $btnDelete = '<button class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete">
-        //           <i class="fa fa-lg fa-fw fa-trash"></i>icon=""/>
-        //       </button>';
-        // $btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
-        //            <i class="fa fa-lg fa-fw fa-eye"></i>
-        //        </button>';
              
         $usersData = array_map(fn($user) => $user = [...$user,  'actions' => [$btnEdit, $btnDelete, $btnShow ]], $users->toArray());
      
@@ -51,7 +45,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

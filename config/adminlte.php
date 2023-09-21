@@ -171,8 +171,8 @@ return [
     'classes_auth_header' => '',
     'classes_auth_body' => '',
     'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_icon' => 'text-light',
+    'classes_auth_btn' => 'btn-rounded btn-sm btn-primary',
 
     /*
     |--------------------------------------------------------------------------
@@ -314,17 +314,16 @@ return [
         ['header' => 'Panel de Control'],
         [
             'text'        => 'Tablero',
-            'url'         => '/',
+            'url'         => '#',
             'icon'        => 'fas fa-tachometer-alt',
         ],
         [
             'text'        => 'Centro de Notificaciones',
-            'url'         => '/',
+            'url'         => '#',
             'icon'        => 'fas fa-comment-dots',
         ],
         [
             'text'        => 'Usuarios',
-            'url'         => '/users',
             'icon'        => 'fas fa-users',
             'submenu' => [
                 [

@@ -23,9 +23,7 @@
                                     @foreach ($row['actions'] as $action)  
                                     <a class="{{ isset($action['class']) ? $action['class'] : 'btn btn-sm btn-link'}}" href="#" role="button" title="{{ isset($action['title']) ? $action['title'] : ''}}">
                                         <i class="fas fa-lg fa-fw {{$action['icon']}}"></i>{{ isset($action['label']) ? $action['label'] : ''}}
-                                    </a>
-                                     
-                                                                  
+                                    </a>                          
                                     @endforeach
                                 </td>
                                 

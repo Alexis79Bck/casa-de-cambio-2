@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('image_url')->default('user-placeholder-default.png');
+            $table->enum('type', ['Admin','RH','Employee']);
+            $table->string('image_url')->default('user-placeholder-default.jpg');
             $table->rememberToken();
             $table->timestamps();
         });
